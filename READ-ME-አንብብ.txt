@@ -1,0 +1,61 @@
+READ ME FIRST - አንብበኝ
+=========================
+
+ይህ ፎልደር ውስጥ ያሉት ፋይሎች ለ InfinityFree ዝግጁ ሆነው የተደራጁ ናቸው።
+
+የፎልደር አወቃቀር (ወደ htdocs ውስጥ በዚህ መልኩ መስቀል አለብህ)፡
+
+htdocs/
+├── index.php
+├── about.php
+├── contact.php
+├── projects.php
+├── db.php
+├── includes/
+│   ├── header.php
+│   └── footer.php
+├── css/
+│   └── style.css
+└── js/
+    └── script.js
+
+(schema.sql እና ይህ README ፋይል ወደ htdocs መስቀል አያስፈልጋቸውም - ለራስህ ማጣቀሻ ብቻ ናቸው)
+
+=========================
+ደረጃ በደረጃ የሚደረግ
+=========================
+
+1) MySQL Database መፍጠር
+   - Control Panel -> "MySQL Databases" ግባ
+   - "Create Database" ተጫን
+   - ስም ስጠው (ለምሳሌ: portfolio)
+   - ከተፈጠረ በኋላ የሚከተሉትን ገልብጥ፡ Hostname, Username, Database name
+     (Password ያው ቀድሞ የፈጠርከው የ account password ነው)
+
+2) db.php ማስተካከል
+   - db.php ን በ File Manager ውስጥ በ "Edit" ክፈት
+   - 4ቱን REPLACE_WITH_... የሚሉ መስመሮች ላይ ካገኘሃቸው እውነተኛ
+     Hostname/Username/Password/Database ስም ጋር ቀይራቸው
+   - Save አድርግ
+
+3) Database Tables መፍጠር
+   - Control Panel -> MySQL Databases -> ዳታቤዙ ላይ "phpMyAdmin" ግባ
+   - "SQL" tab ተጫን
+   - schema.sql ፋይል ውስጥ ያለውን ኮድ ገልብጠህ ለጥፍ
+   - "Go" ተጫን
+
+4) ፋይሎችን መስቀል
+   - File Manager -> htdocs ውስጥ ግባ
+   - ከላይ ያለውን structure እየተከተልክ ሁሉንም ፋይሎች ስቀል
+     (css እና js እና includes የሚባሉ ፎልደሮች መጀመሪያ ፍጠር)
+
+5) ድህረ ገጽህን ጎብኝ
+   - https://abdulaziz-dev.ifree.page ብለህ በ browser ክፈት
+   - Contact ገጽ ላይ መልእክት ልከህ ሞክር - ወደ database ውስጥ ገብቶ ማየት ትችላለህ
+
+=========================
+ማስታወሻ
+=========================
+- ማንኛውም ችግር ካጋጠመህ (ለምሳሌ "Error establishing database connection")
+  ማለት db.php ላይ ያስገባኸው Hostname/Username/Password/Database ስም
+  ላይ ስህተት አለ ማለት ነው - እንደገና ገልብጠህ አረጋግጥ
